@@ -15,9 +15,15 @@
     />
   </head>
   <body>
+    <div id="errorMsg"></div>
     <div class="container" id="container">
       <div class="form-container sign-up-container">
-        <form>
+        <form
+          class="signup"
+          name="signupForm"
+          onsubmit="return validateSignupForm()"
+          method="POST"
+        >
           <h1>Sign Up</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-instagram"></i></a>
@@ -25,14 +31,19 @@
             <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button onclick="return false;">Sign Up</button>
+          <input type="text" id="signName" placeholder="Name" />
+          <input type="email" id="signEmail" placeholder="Email" />
+          <input type="password" id="signPassword" placeholder="Password" />
+          <button onclick="return validateSignupForm();">Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form>
+        <form
+          class="login"
+          name="loginForm"
+          onsubmit="return validateLoginForm()"
+          method="POST"
+        >
           <h1>Sign In</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-instagram"></i></a>
@@ -40,10 +51,10 @@
             <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
           </div>
           <span>or use your account</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" id="signEmail" placeholder="Email" />
+          <input type="password" id="signPassword" placeholder="Password" />
           <a href="#">Forgot your password?</a>
-          <button onclick="return false;">Sign In</button>
+          <button onclick="return validateLoginForm();">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">

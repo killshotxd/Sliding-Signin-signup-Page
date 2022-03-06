@@ -99,7 +99,12 @@ button.ghost:hover {
   background: #fff;
   color: var(--secondary-color);
 }
-
+#errorMsg {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
 form {
   background-color: #fff;
   display: flex;
